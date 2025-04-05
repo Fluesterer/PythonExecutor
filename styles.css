@@ -80,21 +80,21 @@ header {
     margin-top: 40px;
 }
 
-.btn-download,
-.btn-return-home {
+.btn-download {
     background-color: #00b894;
     color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 5px;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    border-radius: 50px;
     text-decoration: none;
     margin-top: 30px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-download:hover,
-.btn-return-home:hover {
+.btn-download:hover {
     background-color: #0984e3;
+    transform: scale(1.1);
 }
 
 /* Video Section */
