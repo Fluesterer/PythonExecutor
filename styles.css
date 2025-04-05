@@ -5,119 +5,171 @@
     box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Body & Hintergrund */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212;
     color: #fff;
     line-height: 1.6;
+    font-size: 16px;
 }
 
-/* Header Styles */
-header {
-    background-color: #121212;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    color: #00ff88;
-    font-size: 3rem;
-}
-
-header p {
-    color: #aaa;
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-/* Container für den Inhalt */
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
-/* Features Section */
-.features {
-    margin: 40px 0;
-}
-
-.features h2 {
-    font-size: 2rem;
-    color: #00ff88;
-    margin-bottom: 20px;
-}
-
-.features ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.features ul li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-/* Tutorial Section */
-.tutorial {
-    margin: 40px 0;
-}
-
-.tutorial h2 {
-    font-size: 2rem;
-    color: #00ff88;
-}
-
-.video-container {
+/* Header mit Parallax-Effekt */
+.header {
+    position: relative;
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: 20px;
+    color: #fff;
 }
 
-.video-container iframe {
-    max-width: 100%;
-    height: 315px;
+.header .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
 }
 
-/* Download Button */
-.download {
-    text-align: center;
-    margin: 40px 0;
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #00ff88;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-.download-button {
-    display: inline-block;
-    padding: 10px 20px;
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.btn-main {
     background-color: #0984e3;
     color: white;
+    padding: 15px 25px;
     font-size: 1.2rem;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
-.download-button:hover {
+.btn-main:hover {
     background-color: #6c5ce7;
 }
 
-/* Safety Section */
-.safety {
-    margin: 40px 0;
+/* Features Section */
+.features-section {
+    background-color: #181818;
+    padding: 80px 0;
 }
 
-.safety h2 {
-    font-size: 2rem;
-    color: #ff6347;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
 }
 
-.safety p {
+.feature-card {
+    background-color: #2d2d2d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+    color: #00ff88;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Tutorial Section */
+.tutorial-section {
+    background-color: #1e1e1e;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.tutorial-section iframe {
+    border-radius: 10px;
+}
+
+/* Download Section */
+.download-section {
+    background-color: #2d2d2d;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.btn-download {
+    background-color: #0984e3;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #6c5ce7;
+}
+
+/* Sicherheit Section */
+.security-section {
+    background-color: #2e2e2e;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.security-section p {
     font-size: 1.2rem;
 }
 
 /* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
+.footer {
     background-color: #121212;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
     color: #aaa;
-    margin-top: 40px;
+}
+
+.footer-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-links li {
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    color: #00ff88;
 }
