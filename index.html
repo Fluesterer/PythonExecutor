@@ -5,50 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🐍 Python Script Executor</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>🐍 Python Script Executor</h1>
-            <p>Führe Python-Code aus, installiere Pakete und verwalte deine `.py`-Dateien in einer benutzerfreundlichen GUI.</p>
+    <header class="header">
+        <div class="overlay">
+            <div class="container">
+                <h1 class="title">🐍 Python Script Executor</h1>
+                <p class="subtitle">Die benutzerfreundliche App, um Python-Code auszuführen, Pakete zu installieren und Dateien zu verwalten.</p>
+                <a href="#features" class="btn-main">Jetzt ausprobieren</a>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section class="features">
-            <h2>✨ Features</h2>
-            <ul>
-                <li>🧠 **Code Ausführen**: Direkt Python-Code ausführen und Konsolenausgaben anzeigen.</li>
-                <li>📦 **Paketinstallation**: Python-Pakete direkt aus der GUI installieren.</li>
-                <li>📋 **Installierte Pakete anzeigen**: Zeigt alle installierten Pakete an.</li>
-                <li>💾 **Speichern und Laden von Code**: Speichere oder lade Python-Code als `.py`-Datei.</li>
-                <li>📚 **Einsteigerfreundliches Tutorial**: Ein Tutorial für Anfänger.</li>
-                <li>🎨 **Modernes Darkmode UI**: Stilvolles Design basierend auf `tkinter`.</li>
-            </ul>
-        </section>
-
-        <section class="tutorial">
-            <h2>📚 Tutorial</h2>
-            <p>Sieh dir unser eingebautes Tutorial an, um zu erfahren, wie du Python installierst und Code ausführst.</p>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <main>
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">✨ Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>🧠 Code Ausführen</h3>
+                        <p>Schreibe Python-Code und führe ihn direkt aus. Sieh die Konsolenausgaben live!</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📦 Paketinstallation</h3>
+                        <p>Installiere Python-Pakete direkt über die GUI, ohne die Kommandozeile zu verwenden.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📋 Installierte Pakete anzeigen</h3>
+                        <p>Zeige alle derzeit installierten Pakete und verwalte sie einfach.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>💾 Speichern & Laden von Code</h3>
+                        <p>Speichere Python-Code als `.py`-Datei und lade bestehende Dateien, um sie zu bearbeiten.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="download">
-            <h2>🔽 Download</h2>
-            <p>Lade die neueste Version des Python Script Executors herunter:</p>
-            <a href="#" class="download-button">Download Python Script Executor</a>
+        <section id="tutorial" class="tutorial-section">
+            <div class="container">
+                <h2 class="section-title">📚 Tutorial</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </section>
 
-        <section class="safety">
-            <h2>⚠️ Sicherheitshinweis</h2>
-            <p>Dieser Executor verwendet die Funktion <code>exec()</code> zum Ausführen von Code. Sei vorsichtig und führe nur Code aus, dem du vertraust!</p>
+        <section id="download" class="download-section">
+            <div class="container">
+                <h2 class="section-title">🔽 Download</h2>
+                <p>Lade die neueste Version des Python Script Executors herunter:</p>
+                <a href="#" class="btn-download">Download Python Script Executor</a>
+            </div>
+        </section>
+
+        <section id="security" class="security-section">
+            <div class="container">
+                <h2 class="section-title">⚠️ Sicherheitshinweis</h2>
+                <p>Da der Code über <code>exec()</code> ausgeführt wird, kann schadhafter Code Systemdateien modifizieren. Sei vorsichtig!</p>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>Made with ❤️ by Yep Studios & Slimecraft Studios</p>
+    <footer class="footer">
+        <div class="container">
+            <p>Made with ❤️ by Yep Studios & Slimecraft Studios</p>
+            <ul class="footer-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </div>
     </footer>
 
     <script src="script.js"></script>
