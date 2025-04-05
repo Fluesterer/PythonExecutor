@@ -1,28 +1,120 @@
-// Scroll Reveal für Animationen
-window.sr = ScrollReveal();
+/* Grundlegendes Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-sr.reveal('.feature-card', {
-    origin: 'bottom',
-    distance: '50px',
-    duration: 1000,
-    delay: 200,
-    easing: 'ease-out'
-});
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+}
 
-sr.reveal('.btn-main', {
-    origin: 'bottom',
-    distance: '30px',
-    duration: 1000,
-    delay: 300,
-    easing: 'ease-out'
-});
+/* Header */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
 
-sr.reveal('.video-container', {
-    origin: 'bottom',
-    distance: '50px',
-    duration: 1000,
-    delay: 400,
-    easing: 'ease-out'
-});
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-// Weitere interaktive Features können hier hinzugefügt werden
+.title {
+    font-size: 3rem;
+    color: #00ff88;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* Main Section */
+.main-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #282828;
+}
+
+.content p {
+    font-size: 1.3rem;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.btn-download {
+    background-color: #00b894;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #0984e3;
+}
+
+/* Thank You Page */
+.thank-you-header {
+    position: relative;
+    height: 100vh;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.thank-you-header .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+}
+
+.thank-you-title {
+    font-size: 3rem;
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.thank-you-subtitle {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.btn-return-home {
+    background-color: #0984e3;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.btn-return-home:hover {
+    background-color: #6c5ce7;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    color: #aaa;
+}
+
+.footer-container p {
+    font-size: 1rem;
+}
