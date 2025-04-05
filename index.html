@@ -5,8 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Script Executor</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Einfaches Design für die Seite */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2e2e2e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #ffcc00;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .features-container, .requirements-section, .usage-section, .video-section, .download-section {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px 0;
+        }
+
+        .btn-download {
+            background-color: #ffcc00;
+            color: #2e2e2e;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-align: center;
+            display: block;
+            width: 250px;
+            margin: 40px auto;
+            text-decoration: none;
+        }
+
+        .btn-download:hover {
+            background-color: #e6b800;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+
     <!-- Header Section -->
     <header>
         <div class="header-container">
@@ -18,27 +92,41 @@
     <!-- Features Section -->
     <section class="features-section">
         <h2 class="section-title">✨ Features</h2>
-        <div class="features-container">
-            <!-- Features content here -->
-        </div>
+        <ul>
+            <li>🧠 **Code Ausführen:** Schreibe Python-Code direkt im Editor und führe ihn aus. Erhalte sofortige Konsolenausgaben in einer eingebauten Konsole.</li>
+            <li>📦 **Paketinstallation:** Installiere Python-Pakete mit einem Klick durch die GUI (z. B. `pip install <Paketname>`).</li>
+            <li>📋 **Installierte Pakete anzeigen:** Zeige alle derzeit installierten Python-Pakete an.</li>
+            <li>💾 **Speichern und Laden von Code:** Speichere deinen Python-Code als `.py`-Datei oder lade bereits existierende Python-Dateien.</li>
+            <li>📚 **Einsteigerfreundliches Tutorial:** Ein eingebautes Tutorial hilft dir, Python und `pip` zu installieren und grundlegende Befehle auszuführen.</li>
+            <li>🎨 **Dunkles Design:** Modernes und anpassbares Darkmode-UI basierend auf `tkinter`.</li>
+            <li>🔒 **Sicherheitsfeatures:** Verhindert, dass schadhafter Code unabsichtlich ausgeführt wird, indem der Code in einem sicheren Umfeld getestet wird.</li>
+        </ul>
     </section>
 
     <!-- Requirements Section -->
     <section class="requirements-section">
         <h2 class="section-title">🛠️ Voraussetzungen</h2>
         <ul>
-            <li>Python 3.6 oder neuer</li>
-            <li>pip: Die Python-Paketverwaltung sollte installiert sein</li>
+            <li>Python 3.6 oder neuer (wird empfohlen, da ältere Versionen möglicherweise nicht vollständig unterstützt werden)</li>
+            <li>pip: Die Python-Paketverwaltung sollte installiert sein (wird in der Regel zusammen mit Python installiert).</li>
         </ul>
     </section>
 
     <!-- Usage Instructions Section -->
     <section class="usage-section">
         <h2 class="section-title">▶️ Nutzung</h2>
-        <!-- Usage instructions content here -->
+        <h3>1. Installation</h3>
+        <p>Installiere Python:</p>
+        <p>Lade Python von der offiziellen Webseite <a href="https://www.python.org/downloads/" target="_blank" style="color: #ffcc00;">python.org</a> herunter, falls es noch nicht installiert ist.</p>
+
+        <p>Installiere die erforderlichen Abhängigkeiten:</p>
+        <pre><code>pip install -r requirements.txt</code></pre>
+
+        <p>Starte das Skript:</p>
+        <pre><code>python executor.py</code></pre>
     </section>
 
-    <!-- Video Section (Centered Video) -->
+    <!-- Video Section -->
     <section class="video-section">
         <h2 class="section-title">🎥 Video-Tutorial</h2>
         <div class="video-container">
@@ -48,9 +136,30 @@
 
     <!-- Download Button Section -->
     <section class="download-section">
+        <h2 class="section-title">Lade den Python Executor herunter</h2>
         <p>Bereit, deinen Python-Code auszuführen? Lade den Python Script Executor herunter und starte dein Projekt!</p>
-        <!-- Download Button -->
         <a href="PythonScriptExecutor.zip" class="btn-download" download="PythonScriptExecutor.zip">Download Python Executor</a>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security-section">
+        <h2 class="section-title">🛡️ Entwicklersicherheitshinweis</h2>
+        <p>Da das Tool die exec()-Funktion verwendet, um benutzerdefinierten Code auszuführen, besteht immer ein gewisses Risiko. Der ausgeführte Code hat vollen Zugriff auf das System, was dazu führen kann, dass schadhafter Code Systemdateien modifiziert, sensible Daten offenlegt oder das System anderweitig gefährdet.</p>
+        
+        <h3>Wichtige Sicherheitshinweise:</h3>
+        <ul>
+            <li>Führe nur Code aus, dem du vertraust.</li>
+            <li>Vermeide das Ausführen von Code aus unbekannten oder unsicheren Quellen.</li>
+        </ul>
+
+        <h3>Sandboxing:</h3>
+        <p>Es wird empfohlen, den Code in einer sicheren virtuellen Umgebung auszuführen (z. B. mit einer isolierten virtuellen Python-Umgebung), um das Risiko zu minimieren.</p>
+
+        <h3>Verantwortung der Nutzer:</h3>
+        <p>Es liegt in der Verantwortung des Nutzers, sicherzustellen, dass der ausgeführte Code keine ungewollten Auswirkungen hat.</p>
+
+        <h3>Verwendung von exec() und Alternativen:</h3>
+        <p>Sei vorsichtig beim Einsatz von exec(). In vielen Fällen gibt es sicherere Alternativen, wie das Verwenden von Funktionen oder das Ausführen von Code in einer kontrollierten Umgebung.</p>
     </section>
 
     <!-- Footer Section -->
